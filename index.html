@@ -49,7 +49,7 @@
 
  async function checkWeather(city) {
   const response = await fetch(apiurl + city + `&appid=${apikey}`)
-  let data = await response.json()d
+  let data = await response.json()
 
   if (response.status == 404){
     document.querySelector(".error").style.display = "block"
@@ -84,11 +84,13 @@
 
  button.addEventListener("click",()=>{
   checkWeather(inputBox.value)
+  inputBox.value = ""
  })
 
   inputBox.addEventListener("keypress",(event)=>{
     if (event.key === 'Enter') {
         checkWeather(inputBox.value)
+        inputBox.value = ""
   }
  })
 </script>
