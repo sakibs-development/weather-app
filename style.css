@@ -98,3 +98,11 @@ body{
     display: none;
     margin-top: 10px;
 }
+
+
+/* Targets screens 600px wide or smaller */
+@media screen and (max-width: 600px) {
+  .search input{
+    width: 50%;
+  }
+}
